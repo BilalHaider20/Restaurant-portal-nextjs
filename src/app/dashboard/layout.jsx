@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <div lang="en">
+    <div lang="en" className="flex">
       <Sidebar/>
       <main className={inter.className} style={{flex:1}}>{children}</main>
     </div>
