@@ -1,7 +1,7 @@
 "use client"
 import {useState} from 'react'
 import { useRouter } from 'next/navigation'
-
+import "../styles/globals.css"    
 
 export default function Index() {
   const router = useRouter();
