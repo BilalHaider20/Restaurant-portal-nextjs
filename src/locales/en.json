@@ -1,0 +1,15 @@
+{
+  "Home": {
+    "title": "Restaurant Management System",
+    "button": "Login"
+  },
+  "SignIn":{
+    "title": "Sign in to your account",
+    "email": "Email",
+    "password": "Password",
+    "signinbtn": "Sign In",
+    "forgot": "Forgot Password?",
+    "register": "Don't have an account? Register"
+  }
+  
+}

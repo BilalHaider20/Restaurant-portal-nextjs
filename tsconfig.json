@@ -27,7 +27,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "src/app/signin/layout.jsx"  ],
   "exclude": [
     "node_modules"
   ]
