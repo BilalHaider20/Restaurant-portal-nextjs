@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 
+import Images from "public/assets/Images/index";
+
 const Sidebar = () => {
   const [darkMode, setDarkMode] = useState(false);
 
@@ -34,25 +36,46 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="fixed bg-gray-300 ">
+    <div>
+      <div className="bg-[#FFFFFF] px-[15px] py-[20px] w-full border flex">
+        <div className="w-2/3 h-10 border flex justify-start gap-8">
+          {Images.menu_icon }
+        </div>
+        <div className="flex justify-center gap-3 w-1/3 border border-red-500 h-10 align-center">
+          <p className="text-base font-medium text-[#346CC4] my-auto ">Help</p>
+          <button
+            type="button"
+            class="py-3 px-7 inline-flex items-center gap-x-2 text-base font-medium rounded-lg border border-[#346CC4] text-[#346CC4]  focus:outline-none  disabled:pointer-events-none"
+          >
+            Login
+          </button>
+          <button
+            type="button"
+            class="py-3 px-7 inline-flex items-center gap-x-2 text-base font-medium rounded-lg border border-transparent bg-[#346CC4] text-white  disabled:opacity-50 disabled:pointer-events-none"
+          >
+            Sign Up
+          </button>
+        </div>
+      </div>
+      {/* 
       <div
         className={`min-h-screen flex ${
           darkMode ? "bg-gray-900 text-gray-200" : "bg-gray-200 text-gray-900"
         } transition-colors duration-200`}
       >
         {/* Sidebar */}
-        <div className="w-64 flex flex-col h-screen fixed">
-          {/* Logo / Branding */}
-          <div
+      {/* <div className="w-64 flex flex-col h-screen fixed"> */}
+      {/* Logo / Branding */}
+      {/* <div
             className={`flex items-center justify-center h-16 ${
               darkMode ? "bg-gray-800" : "bg-gray-300"
             } transition-colors duration-200`}
           >
             <span className="text-2xl font-semibold">Admin Dashboard</span>
-          </div>
+          </div> */}
 
-          {/* Light/Dark Mode Toggle */}
-          <div className="p-4 flex justify-center">
+      {/* Light/Dark Mode Toggle */}
+      {/* <div className="p-4 flex justify-center">
             <label className="relative inline-flex items-center cursor-pointer">
               <input
                 type="checkbox"
@@ -69,9 +92,9 @@ const Sidebar = () => {
                 {darkMode ? "Dark Mode" : "Light Mode"}
               </span>
             </label>
-          </div>
-          {/* Navigation Links */}
-          <nav className="flex-1 px-4 py-6 overflow-y-auto">
+          </div> */}
+      {/* Navigation Links */}
+      {/* <nav className="flex-1 px-4 py-6 overflow-y-auto">
             <ul className="space-y-2">
               <li>
                 <a
@@ -178,10 +201,10 @@ const Sidebar = () => {
                 </a>
               </li>
             </ul>
-          </nav>
+          </nav> */}
 
-          {/* Logout Button */}
-          <div className="px-4 py-4">
+      {/* Logout Button */}
+      {/* <div className="px-4 py-4">
             <button
               onClick={handleLogout}
               className={`w-full flex items-center p-2 text-sm font-medium rounded-md ${
@@ -206,14 +229,14 @@ const Sidebar = () => {
               </svg>
               Logout
             </button>
-          </div>
-        </div>
+          </div> */}
+      {/* </div> */}
 
-        {/* Main Content Area */}
-        <div className="ml-64 flex-1 h-screen overflow-hidden">
-          {/* Your main dashboard content goes here */}
-        </div>
-      </div>
+      {/* Main Content Area */}
+      {/* <div className="ml-64 flex-1 h-screen overflow-hidden"> */}
+      {/* Your main dashboard content goes here */}
+      {/* </div>
+      </div> */}
     </div>
   );
 };
