@@ -3,7 +3,7 @@ import React from "react";
 
 
 import images from "../../public/assets/Images/index";
-import Dropdown from "../components/DropDown";
+import Dropdown from "./DropDown.jsx";
 import Sidebar from "./Sidebar.jsx";
 import Image from "next/image";
 

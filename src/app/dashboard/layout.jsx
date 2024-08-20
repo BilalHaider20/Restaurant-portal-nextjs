@@ -10,7 +10,7 @@ export const metadata = {
   description: "Bookme Restaurant Portal",
 };
 
-export default function RootLayout({ children }) {
+export default function Layout({ children }) {
   return (
     <html lang="en">
       <body>
