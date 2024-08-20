@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 html, body {
-    @apply h-full w-full;
+    @apply h-full w-full flex flex-col;
   }
   
 #root, #__next {
-    @apply h-full;
+    @apply h-full ;
 }
 
 .inputForm {
@@ -19,5 +19,5 @@ html, body {
 }
 
 .btnSigninWith{
-  @apply w-full border border-2 border-light-blue rounded flex justify-center items-center py-2 gap-2;
+  @apply w-full border  border-light-blue rounded flex justify-center items-center py-2 gap-2;
 }
