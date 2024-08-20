@@ -12,9 +12,9 @@ const countryCodes = [
 const PhoneNumber = () => {
   const [selectedCode, setSelectedCode] = useState(countryCodes[0].code);
   return (
-    <div className="flex mb-4 border border-[#e6e6e6] rounded-lg">
+    <div className="flex mb-4 border border-[#e6e6e6] rounded-l-lg">
       <select
-        className="rounded-l h-[48px] w-[80px] bg-gray-100 px-2"
+        className="rounded-l h-[48px] w-[80px] bg-white px-2"
         value={selectedCode}
         onChange={(e) => setSelectedCode(e.target.value)}
       >
@@ -27,7 +27,7 @@ const PhoneNumber = () => {
       <input
         type="text"
         placeholder="e.g., +92 300 123 4567"
-        className="rounded-r h-[48px] w-[600px] p-2 bg-gray-100"
+        className="rounded-r-lg h-[48px] w-[600px] p-2 bg-white border-gray-40 border border-r-0"
       />
     </div>
   );

@@ -11,7 +11,7 @@ html, body {
 }
 
 .inputForm {
-  @apply border-gray-400 m-0 py-3 px-4 block w-full rounded-lg text-sm border pl-10 focus:border-transparent;
+  @apply border-[#e6e6e6] m-0 py-3 px-4 block w-full rounded-lg text-sm border pl-10 focus:border-transparent;
 }
 
 .formSvgDiv{

@@ -5,6 +5,7 @@ import "../../styles/globals.css"
 import Image from 'next/image'
 import { useForm } from 'react-hook-form'
 import { LuKeyRound } from "react-icons/lu";
+import PhoneNumber from '../../../components/PhoneNumber'
 
 export default function Page() {
   const router = useRouter();
@@ -27,12 +28,7 @@ export default function Page() {
         <form onSubmit={handleSubmit(onSubmit)} className='my-5 container mx-auto w-9/12 space-y-4'>
           <div className="space-y-2 w-full">
             <label className='m-0' htmlFor="phone">Phone Number</label>
-            <input 
-              {...register('phone')} 
-              type="text" 
-              className="inputForm" 
-              placeholder="Phone Number" 
-            />
+            <PhoneNumber />
           </div>
           <div className="relative space-y-2 w-full">
             <label className='m-0' htmlFor="Password">Password</label>

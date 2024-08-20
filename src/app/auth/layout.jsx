@@ -2,6 +2,7 @@ import Image from "next/image"
 import logo from '/public/assets/images/BookmeLogo.png'
 
 
+
 export default function AuthLayout({ children }) {
   return (
     <html className="flex h-full">
