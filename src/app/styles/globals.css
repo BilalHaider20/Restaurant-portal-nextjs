@@ -2,3 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+    @apply h-full w-full;
+  }
+  
+#root, #__next {
+    @apply h-full;
+}
+
+.inputForm {
+  @apply border-gray-400 m-0 py-3 px-4 block w-full rounded-lg text-sm border pl-10 focus:border-transparent;
+}
+
+.formSvgDiv{
+  @apply absolute top-[38px] start-0 flex items-center pointer-events-none ps-4 peer-disabled:opacity-50 peer-disabled:pointer-events-none;
+}
+
+.btnSigninWith{
+  @apply w-full border border-2 border-light-blue rounded flex justify-center items-center py-2 gap-2;
+}

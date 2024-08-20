@@ -4,6 +4,8 @@ module.exports = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/**/*.{js,ts,jsx,tsx,mdx}",
+    './node_modules/preline/preline.js',
     './node_modules/preline/preline.js',
   ],
   theme: {
@@ -17,7 +19,8 @@ module.exports = {
         "grey":"#6B7280",
         "light-blue":"#346CC4",
         "grey-text":"#808080",
-        "primary-blue":"#0C4DA8"
+        "primary-blue":"#0C4DA8",
+        "background-blue": "#F6F9FD"
       }
     },
   },
