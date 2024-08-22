@@ -13,14 +13,14 @@ const Dropdown = ({options}) => {
   
 
   return (
-    <div className="relative">
+    <div className="relative flex">
       <button
-        className=" py-2 px-3 rounded-md text-left text-light-blue text-base font-medium flex justify-between items-center"
+        className=" py-2 px-3 w-fit rounded-md text-left text-light-blue text-base font-base flex justify-between items-center"
         onClick={toggleDropdown}
       >
         {selectedOption}
         <svg
-          className={`w-4 h-4 ml-1 transform transition-transform ${
+          className={`w-4 h-4 ml-1 w-fit transform transition-transform ${
             isOpen ? 'rotate-180' : ''
           }`}
           fill="none"
@@ -41,7 +41,7 @@ const Dropdown = ({options}) => {
           {options.map((option, index) => (
             <li
               key={index}
-              className="py-2 px-4 hover:bg-gray-100 text-light-blue font-medium text-base cursor-pointer"
+              className="py-2 px-4 hover:bg-gray-100 text-light-blue font-base text-base cursor-pointer"
               onClick={() => handleOptionClick(option)}
             >
               {option}
