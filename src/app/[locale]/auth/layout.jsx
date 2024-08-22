@@ -11,8 +11,8 @@ export default function AuthLayout({ children }) {
           </div>
           <div className="flex flex-grow flex-col h-full md:flex-row">
             {children}
-            <div className='flex flex-col items-center justify-center px-5 w-full h-screen border-box md:w-6/12 '>
-              <div className="relative w-full h-screen">
+            <div className='flex flex-col items-center justify-center px-5 w-full h-screen border-box md:w-6/12 md:h-5/6'>
+              <div className="relative w-full h-screen md:h-full">
                 <Image
                   src="/assets/images/login-img.png"
                   alt="image"

@@ -113,7 +113,7 @@ export default function Page() {
                 <a className='btnSigninWith' href=""><Image src="/assets/images/facebook.png" width={15} height={15}></Image> Sign in with Facebook</a>
             </div>
             <p className='flex font-base items-center gap-2 mt-7 '>Already have an account?  <Link className="font-base text-light-blue text-semibold" href="/en/auth/login">Sign In</Link></p>
-            <p className='flex font-base items-center gap-2 mt-7 '>By Signing in you agree to our  <Link className="font-base text-light-blue " href="">Terms Conditions</Link> & <Link className="font-base text-light-blue " href="">Privacy Policy</Link></p>
+            <p className='flex font-base items-center gap-2 mt-7 px-5 align-center '>By Signing in you agree to our  <Link className="font-base text-light-blue inline " href="">Terms Conditions</Link> & <Link className="font-base text-light-blue inline" href="">Privacy Policy</Link></p>
         </div>
 
     );
