@@ -9,10 +9,10 @@ export default function AuthLayout({ children }) {
             <Image src={logo} />
             <a href="" className="text-primary-blue ">Help</a>
           </div>
-          <div className="flex flex-grow h-full">
+          <div className="flex flex-grow flex-col h-full md:flex-row">
             {children}
-            <div className='flex flex-col items-center justify-center px-5 w-6/12 h-full border-box'>
-              <div className="relative w-full h-5/6">
+            <div className='flex flex-col items-center justify-center px-5 w-full h-screen border-box md:w-6/12 '>
+              <div className="relative w-full h-screen">
                 <Image
                   src="/assets/images/login-img.png"
                   alt="image"

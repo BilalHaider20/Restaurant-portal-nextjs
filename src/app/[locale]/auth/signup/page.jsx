@@ -32,12 +32,12 @@ export default function Page() {
     return (
 
 
-        <div className='flex flex-col items-center justify-center w-6/12 h-full py-20 bg-background-blue'>
+        <div className='flex flex-col items-center justify-center w-full  h-full py-20 bg-background-blue md:w-6/12 '>
             <div className='container  mx-auto w-9/12 text-center'>
                 <h1 className='text-3xl font-semibold text-heading-grey tracking-tighter '>Welcome to Bookme</h1>
                 <span className='text-lg text-heading-grey tracking-tighter font-light'>Please provide details below to login your account</span>
             </div>
-            <form onSubmit={handleSubmit(onSubmit)} className='my-10 container mx-auto w-9/12 space-y-4'>
+            <form onSubmit={handleSubmit(onSubmit)} className='formAuth  '>
                 <div className="space-y-2 w-full relative">
                     <label className='m-0' htmlFor="name">Name <span className='text-red-500'>*</span></label>
                     <div className="formSvgDiv">
@@ -105,10 +105,10 @@ export default function Page() {
                     </div>
                     {errors.confirmPassword && <p className="text-red-500" role="alert">{errors.confirmPassword.message}</p>}
                 </div>
-                <button type="submit" className="bg-light-blue text-white py-2 px-4 rounded w-full">Sign In</button>
+                <button type="submit" className="bg-light-blue text-white py-3 px-4 rounded w-full">Sign In</button>
             </form>
             <p className='text-grey'>or continue with</p>
-            <div className='flex flex-col w-9/12 mt-7 space-y-2'>
+            <div className='btnAuth'>
                 <a className='btnSigninWith' href=""><Image src="/assets/images/google.png" width={15} height={15}></Image> Sign in with Google</a>
                 <a className='btnSigninWith' href=""><Image src="/assets/images/facebook.png" width={15} height={15}></Image> Sign in with Facebook</a>
             </div>
