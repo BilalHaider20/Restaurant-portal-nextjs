@@ -1,11 +1,20 @@
+"use client";
 import React from 'react';
-import images from '../../../public/assets/Images/index' // or use /assets/logo.png if using the public folder
+import images from '../../../public/assets/Images/index'; // or use /assets/logo.png if using the public folder
 import Image from 'next/image';
-
+import { useRouter } from 'next/navigation';
 
 const Reset = () => {
+  const router = useRouter();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    router.push('./reset/success');
+  };
+
   return (
-    <div >
+    <div>
       <nav className='flex items-center justify-between p-4 w-full text-white'>
         <Image src={images.logo} alt="Logo" className="h-10 w-auto" />
         <div className='space-x-4'>
@@ -21,51 +30,41 @@ const Reset = () => {
         </div>
       </nav>
       <div className='flex'>
-      <div className=" h-screen w-[720px] bg-white  " >
-        <div className="w-[720px] h-full bg-[#f6f9fd] border border-[#f6f9fd] shadow-lg p-6 "  >
-          <p className="text-gray-700 font-bold text-xl pl-48 pt-10">Reset Your Password</p>
-          <p className='text-gray-700 font-light text-2xl pl-18 pr-10 pt-2 flex text-center'>Please reset your password, your new password must be different from your previous password</p>
-          <div className="flex mb-4 border border-[#e6e6e6] rounded-lg">
-          </div>
-          <div className="text-gray-700 font-normal ">OTP <div/>
-          <div className='flex'>
-            <Image className='bg-white h-8 w-10' src = {images.leading_case} />
-          <input  type='text' className='rounded pl-2 h-8 w-[526px]' placeholder='Enter OTP'/>
+        <div className="h-screen w-[720px] bg-white">
+          <div className="w-[720px] h-[1037px] bg-[#f6f9fd] border border-[#f6f9fd] shadow-lg p-6">
+            <p className="text-[#3C3C3C] font-bold text-[32px] pl-48 ml-0 pt-10">Reset Your Password</p>
+            <p className='text-[#6B7280] font-[400] text-[18px] ml-16 pl-0 pr-12 pt-2 flex text-center'>
+              Please reset your password, your new password must be different from your previous passwords
+            </p>
+            <div className="text-[#3C3C3C] font-[500] text-[18px] ml-16 mt-4">
+              OTP
+              <div className='flex'>
+                <Image className='bg-white h-[52px] w-[56px]' src={images.leading_case} alt="OTP Icon" />
+                <input type='text' className='rounded pl-2 h-[51px] w-[480px] font-normal' placeholder='Enter OTP' />
+              </div>
             </div>
-
-          </div>
-
-          <div className="text-gray-700 font-semibold mt-4 ">New Password </div>
-          <div>
-            <div className='flex'>
-            <Image className='bg-white h-8 w-10' src = {images.leading_case2} />
-          <input type='text' className='rounded pl-2 h-8 w-[526px]'
-            placeholder='Enter New Password' />
+            <div className="text-[#3C3C3C] font-[500] text-[18px] mt-4 ml-16">New Password</div>
+            <div>
+              <div className='flex ml-16'>
+                <Image className='bg-white h-[52px] w-[56px]' src={images.leading_case2} alt="Password Icon" />
+                <input type='text' className='rounded pl-2 h-[51px] w-[480px]' placeholder='Enter New Password' />
+              </div>
+              <p className="text-[#346CC4] ml-16">Must be at least 6 characters</p>
             </div>
-            <p className="text-[#346CC4]">Must be atleast 6 characters</p>
-            
+            <div className="text-[#3C3C3C] font-[500] text-[18px] mt-4 ml-16">Confirm New Password</div>
+            <div className='flex ml-16'>
+              <Image className='bg-white h-[52px] w-[56px]' src={images.leading_case2} alt="Confirm Password Icon" />
+              <input type='text' className='rounded pl-2 h-[51px] w-[480px]' placeholder='Confirm New Password' />
+            </div>
+            <button className='bg-[#346CC4] border-[#346CC4] text-white rounded w-[536px] mt-8 h-[48px] ml-16' onClick={handleSubmit}>Submit</button>
+            <button className='text-[#346CC4] rounded w-[536px] mt-2 h-[48px] border border-[#346CC4] ml-16'>Back to Login</button>
           </div>
-
-          <div className="text-gray-700 font-normal  mt-4 ">Confirm New Password </div>
-          <div className='flex'>
-          <Image className='bg-white h-8 w-10' src = {images.leading_case2} />
-            <input type='text' className='rounded pl-2 h-8 w-[526px]'
-            placeholder='Confirm New Password' />
-
-          </div>
-          <button className='bg-[#346CC4] border-[#346CC4] text-white rounded w-[565px] mt-8 h-8'>Submit</button>
-    
-          <button className='text-[#346CC4] rounded w-[565px] mt-2 h-8 border border-[#346CC4]'>Back to Login</button>
+        </div>
+        <div className=''>
+          <Image className='w-[664px] h-[703] ml-10px mt-6' src={images.reset_pic} alt="Reset Illustration" />
         </div>
       </div>
-      
-      <div className= ''>
-        <Image className='w-[664px] h-[703] gap-10px ' src={images.reset_pic}></Image>
-      </div>
-      </div>
-      
     </div>
-    
   );
 };
 
