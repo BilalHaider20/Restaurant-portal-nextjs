@@ -20,7 +20,9 @@ module.exports = {
         "light-blue":"#346CC4",
         "grey-text":"#808080",
         "primary-blue":"#0C4DA8",
-        "background-blue": "#F6F9FD"
+        "background-blue": "#F6F9FD",
+        'heading-grey': '#3C3C3C',
+        'divider-grey' : '#E6E6E6'
       }
     },
   },

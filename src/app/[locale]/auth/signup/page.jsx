@@ -1,14 +1,18 @@
 "use client"
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import "../../styles/globals.css"
 import Image from 'next/image'
 import { useForm } from 'react-hook-form'
 import { AiOutlineUser } from "react-icons/ai";
 import { CiMail } from "react-icons/ci";
 import { LuKeyRound } from 'react-icons/lu'
 import Link from 'next/link'
-import PhoneNumber from '../../../components/PhoneNumber'
+import PhoneInput from 'react-phone-input-2'
+import { Inter } from "next/font/google";
+import 'react-phone-input-2/lib/style.css'
+
+
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Page() {
     const router = useRouter();
@@ -28,12 +32,12 @@ export default function Page() {
     return (
 
 
-        <div className='flex flex-col items-center justify-center w-6/12 h-full py-32 bg-background-blue'>
-            <div className='container mx-auto w-9/12 text-center'>
-                <h1 className='text-3xl font-semibold'>Welcome to Bookme</h1>
-                <span className='text-lg font-extralight'>Please provide details below to login your account</span>
+        <div className='flex flex-col items-center justify-center w-6/12 h-full py-20 bg-background-blue'>
+            <div className='container  mx-auto w-9/12 text-center'>
+                <h1 className='text-3xl font-semibold text-heading-grey tracking-tighter '>Welcome to Bookme</h1>
+                <span className='text-lg text-heading-grey tracking-tighter font-light'>Please provide details below to login your account</span>
             </div>
-            <form onSubmit={handleSubmit(onSubmit)} className=' container mx-auto w-9/12 space-y-4'>
+            <form onSubmit={handleSubmit(onSubmit)} className='my-10 container mx-auto w-9/12 space-y-4'>
                 <div className="space-y-2 w-full relative">
                     <label className='m-0' htmlFor="name">Name <span className='text-red-500'>*</span></label>
                     <div className="formSvgDiv">
@@ -64,7 +68,7 @@ export default function Page() {
                 </div>
                 <div className="space-y-2 w-full">
                     <label className='m-0' htmlFor="phone">Phone Number <span className='text-red-500'>*</span></label>
-                    <PhoneNumber />
+                    <PhoneInput country='pk' className="inputForm" />
                 </div>
                 <div className="relative space-y-2 w-full">
                     <label className='m-0' htmlFor="password">Password <span className='text-red-500'>*</span></label>
@@ -104,11 +108,11 @@ export default function Page() {
                 <button type="submit" className="bg-light-blue text-white py-2 px-4 rounded w-full">Sign In</button>
             </form>
             <p className='text-grey'>or continue with</p>
-            <div className='flex flex-col w-9/12 mt-3 space-y-2'>
+            <div className='flex flex-col w-9/12 mt-7 space-y-2'>
                 <a className='btnSigninWith' href=""><Image src="/assets/images/google.png" width={15} height={15}></Image> Sign in with Google</a>
                 <a className='btnSigninWith' href=""><Image src="/assets/images/facebook.png" width={15} height={15}></Image> Sign in with Facebook</a>
             </div>
-            <p className='flex font-base items-center gap-2 mt-7 '>Already have an account?  <Link className="font-base text-light-blue text-semibold" href="/auth/login">Sign In</Link></p>
+            <p className='flex font-base items-center gap-2 mt-7 '>Already have an account?  <Link className="font-base text-light-blue text-semibold" href="/en/auth/login">Sign In</Link></p>
             <p className='flex font-base items-center gap-2 mt-7 '>By Signing in you agree to our  <Link className="font-base text-light-blue " href="">Terms Conditions</Link> & <Link className="font-base text-light-blue " href="">Privacy Policy</Link></p>
         </div>
 
