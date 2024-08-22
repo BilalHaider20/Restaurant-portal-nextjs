@@ -13,7 +13,7 @@ const images = {
   google_play: require("./google-play.png"),
   twitter: require("./twitter.svg"),
   instagram: require("./intagram.svg"),
-  fb: require("./fb.svg")
+  fb: require("./fb.svg"),
   leading_case2:require("./leading2.png"),
   reset_pic: require("./reset-pic.png"),
   sticker_pic: require("./Sticker.png")
