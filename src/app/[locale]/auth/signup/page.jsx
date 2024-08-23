@@ -1,31 +1,32 @@
-"use client"
-import { useState } from 'react'
-import { useRouter } from 'next/navigation'
-import Image from 'next/image'
-import { useForm } from 'react-hook-form'
+"use client";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import Image from "next/image";
+import { useForm } from "react-hook-form";
 import { AiOutlineUser } from "react-icons/ai";
 import { CiMail } from "react-icons/ci";
-import { LuKeyRound } from 'react-icons/lu'
-import Link from 'next/link'
-import PhoneInput from 'react-phone-input-2'
+import { LuKeyRound } from "react-icons/lu";
+import Link from "next/link";
+import PhoneInput from "react-phone-input-2";
 import { Inter } from "next/font/google";
-import 'react-phone-input-2/lib/style.css'
-
+import "react-phone-input-2/lib/style.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Page() {
-    const router = useRouter();
+  const router = useRouter();
 
-    const {
-        register,
-        handleSubmit,
-        formState: { errors },
-    } = useForm()
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
-    const onSubmit = (data) => {
-        console.log(data)
-    }
+  const onSubmit = (data) => {
+    console.log(data);
+    // Redirect or perform additional actions after successful submission
+    // router.push('/next-page')
+  };
 
     return (
 
