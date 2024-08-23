@@ -27,7 +27,10 @@ const images = {
   swap_arrow: require("./swap-arrow.svg"),
   arrival: require("./arrival.svg"),
   moon: require("./moon.svg"),
-  pin: require("./pin.svg")
+  pin: require("./pin.svg"),
+  visa: require("./visa.svg"),
+  abudhabi: require('./abudhabi.png'),
+  etihad: require('./etihad.png')
 };
 
 export default images;

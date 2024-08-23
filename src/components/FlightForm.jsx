@@ -56,7 +56,7 @@ const FlightForm = () => {
                     {errors.arrival && <p className="text-red-500" role="alert">{errors.arrival.message}</p>}
                 </div>
             </div>
-            <div className='flex items-center justify-between my-4'>
+            <div className='flex items-center justify-between mt-3 mb-2'>
                 <div className=''>
                     <button type="button" onClick={() => setStopoverForm(true)} className='flex items-center gap-1'>
                         {!stopoverForm && <span className=' border border-white rounded-full  w-[20px] h-[20px] inline-flex items-center justify-center text-sm '><AiOutlinePlus /> </span>}
