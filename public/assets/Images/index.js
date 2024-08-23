@@ -16,7 +16,18 @@ const images = {
   fb: require("./fb.svg"),
   leading_case2:require("./leading2.png"),
   reset_pic: require("./reset-pic.png"),
-  sticker_pic: require("./Sticker.png")
+  sticker_pic: require("./Sticker.png"),
+  economy_dark: require("./economy-dark.svg"),
+  economy_blue: require("./economy-blue.svg"),
+  business_dark: require("./business-dark.svg"),
+  business_blue: require("./business-blue.svg"),
+  first_class_dark: require("./first-class-dark.svg"),
+  first_class_blue: require("./first-class-blue.svg"),
+  takeoff: require("./takeoff.svg"),
+  swap_arrow: require("./swap-arrow.svg"),
+  arrival: require("./arrival.svg"),
+  moon: require("./moon.svg"),
+  pin: require("./pin.svg")
 };
 
 export default images;

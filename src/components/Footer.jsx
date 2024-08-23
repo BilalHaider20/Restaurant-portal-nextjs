@@ -10,7 +10,7 @@ const Footer = () => {
     const options = ["PKR", "EUR", "USD", "SAR"];
     return (
         
-        <div className='absolute bottom-0 w-full px-4 '>
+        <div className='w-full py-5 px-4 '>
             <div className="flex justify-between mt-auto">
                 <ul className="footerDiv">
                     <li className="font-medium text-lg">About</li>

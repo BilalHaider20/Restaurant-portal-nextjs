@@ -25,8 +25,6 @@ export default function Page() {
 
     const onSubmit = (data) => {
         console.log(data)
-        // Redirect or perform additional actions after successful submission
-        // router.push('/next-page')
     }
 
     return (

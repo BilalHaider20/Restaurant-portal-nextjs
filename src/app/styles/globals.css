@@ -29,7 +29,7 @@ html, body *{
   @apply w-full ml-0 pl-5 flex   !important;
 }
 .inputForm input{
-  @apply border-[#e6e6e6] m-0 py-5 h-11 px-4 block w-full rounded-lg text-base border border-0 pl-14 focus:border-transparent !important;
+  @apply border-[#e6e6e6] m-0 py-5 h-11 px-4 block w-full rounded-lg text-base border border-0 pl-14 focus:border-transparent focus:outline-blue-500 !important;
 }
 .formSvgDiv{
   @apply absolute top-[38px] start-0 flex items-center pointer-events-none ps-4 peer-disabled:opacity-50 peer-disabled:pointer-events-none;
@@ -48,6 +48,23 @@ html, body *{
 .tripToggle {
   @apply relative px-4 py-2 rounded-md transition-colors;
 }
+
+.flightInput{
+  @apply bg-[#FFFFFF1A] border-[#6A91CF] border m-0 py-4 h-11 px-4 block w-full rounded-lg text-base pl-14 placeholder:text-background-blue focus:outline-none; 
+}
+.flightSvgDiv{
+  @apply absolute text-xl left-4 top-[16px] text-background-blue;
+}
+.moon{
+  @apply top-[20px] !important;
+}
+.pgerDropdownDiv{
+  @apply flex justify-between items-center mb-4 text-sm;
+}
+.pgerDropdownBtn{
+  @apply  px-2 text-2xl rounded-[8px] border border-divider-grey font-light ;
+}
+
 .footerDiv{
   @apply flex flex-col gap-4  list-none;
 }

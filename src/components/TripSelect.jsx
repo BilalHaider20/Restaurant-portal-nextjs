@@ -12,8 +12,8 @@ export default function ToggleButtons({ onChange }) {
   };
   
   return (
-    <div className="relative bg-[#FFFFFF1A] py-1 px-3 rounded-full text-white w-fit flex items-center">
-      <div className="flex space-x-4 text-sm font-base ">
+    <div className="relative bg-[#FFFFFF1A] py-2 px-4 rounded-full text-white w-fit flex  items-center">
+      <div className="flex gap-7 text-sm font-light ">
         <button
           onClick={() => handleClick('One-Way')}
         >
@@ -32,10 +32,9 @@ export default function ToggleButtons({ onChange }) {
         </button>
       </div>
       <div
-        className="absolute inset-0 flex items-center justify-center pointer-events-none"
-        style={{ left: `calc(${active === 'One-Way' ? '0%' : active === 'Round-Way' ? '33.33%' : '66.66%'} - 0.5rem)` }}
+        className="absolute z-10 bottom-0 w-[93px] h-full bg-[#FFFFFF33] rounded-full flex items-center justify-center pointer-events-none transition-left duration-300 ease-in-out"
+        style={{ left: `calc(${active === 'One-Way' ? '0.2rem' : active === 'Round-Way' ? '100px' : '200px'} - 0.3rem)` }}
       >
-        <div className="w-1/3 h-1/3 bg-blue-500 rounded-full transition-transform duration-300" />
       </div>
     </div>
   );
