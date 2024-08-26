@@ -1,26 +1,45 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactCountryFlag from "react-country-flag";
+import { useAppDispatch, useAppSelector } from '../lib/hooks';
+import { setLanguage } from '../lib/features/lang/langSlice';
+
+
 
 const LangDropdown = () => {
+
     const options = [
-        { lang: "English", code: "en", iconCode: "GB" }, // Corrected the UK country code to GB
+        { lang: "English", code: "en", iconCode: "GB" },
         { lang: "Arabic", code: "ar", iconCode: "SA" },
     ];
 
+    const dispatch = useAppDispatch()
+    const lang = useAppSelector((state) => state.lang);
+
+    const currentLang = useAppSelector((state) => state.lang);
     const [isOpen, setIsOpen] = useState(false);
-    const [selectedOption, setSelectedOption] = useState(options[0]);
+    const [selectedOption, setSelectedOption] = useState(
+        options.find(option => option.code === currentLang) || options[0]
+    );
+
+    useEffect(() => {
+        const selected = options.find(option => option.code === lang.lang);
+        if (selected) {
+            setSelectedOption(selected);
+        }
+    }, []);
 
     const toggleDropdown = () => setIsOpen(!isOpen);
 
     const handleOptionClick = (option) => {
         setSelectedOption(option);
+        dispatch(setLanguage(option.code));
         setIsOpen(false);
     };
 
     return (
         <div className="relative flex flex-row">
             <button
-                className=" py-2 px-3 rounded-md text-left text-grey-text  text-base font-light flex justify-between items-center"
+                className="py-2 px-3 rounded-md text-left text-grey-text text-base font-light flex justify-between items-center"
                 onClick={toggleDropdown}
             >
                 <ReactCountryFlag 

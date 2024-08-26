@@ -2,7 +2,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import images from "/public/assets/images/index"
-import { useState } from 'react';
 import Dropdown from './DropDown';
 import LangDropdown from './LangDropdown'
 

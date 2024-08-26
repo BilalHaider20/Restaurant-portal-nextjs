@@ -7,6 +7,7 @@ const Dropdown = ({options}) => {
   const toggleDropdown = () => setIsOpen(!isOpen);
 
   const handleOptionClick = (option) => {
+    console.log(option);
     setSelectedOption(option);
     setIsOpen(false);
   };
@@ -44,7 +45,7 @@ const Dropdown = ({options}) => {
               className="py-2 px-4 hover:bg-gray-100 text-light-blue font-medium text-base cursor-pointer"
               onClick={() => handleOptionClick(option)}
             >
-              {options}
+              {option}
             </li>
           ))}
         </ul>

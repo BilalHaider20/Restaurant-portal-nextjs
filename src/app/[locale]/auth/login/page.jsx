@@ -69,8 +69,8 @@ export default function Page() {
       </form>
       <p className='text-grey '>or continue with</p>
       <div className='btnAuth'>
-        <a className='btnSigninWith' href=""><Image src="/assets/images/google.png" width={15} height={15}></Image> Sign in with Google</a>
-        <a className='btnSigninWith' href=""><Image src="/assets/images/facebook.png" width={15} height={15}></Image> Sign in with Facebook</a>
+        <a className='btnSigninWith' href=""><Image src="/assets/images/google.png" width={15} height={15} alt='google icon'></Image> Sign in with Google</a>
+        <a className='btnSigninWith' href=""><Image src="/assets/images/facebook.png" width={15} height={15} alt='fb icon'></Image> Sign in with Facebook</a>
       </div>
       <p className='flex font-base items-center gap-2 mt-3'>Don’t Have an Account? <Link className="font-base text-light-blue text-semibold" href="/en/auth/signup">Sign Up</Link></p>
     </div>
