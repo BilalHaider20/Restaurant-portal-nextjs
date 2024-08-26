@@ -14,12 +14,13 @@ export const metadata = {
   description: "Bookme Restaurant Portal",
 };
 
-export default async function RootLayout({ children, locale }) {
-  const messages = await getMessages();
+export default async function RootLayout({ children, params }) {
+  const messages = await getMessages(params.locale);
+  const direction = params.locale === "ar" ? "rtl" : "ltr";
   return (
-    <html lang={locale} dir="rtl" >
+    <html lang={params.locale} dir={direction} >
       <body className={` ${inter.className}`}>
-        <NextIntlClientProvider messages={messages} locale={locale}>
+        <NextIntlClientProvider messages={messages} locale={params.locale}>
           <StoreProvider>
             {children}
           </StoreProvider>

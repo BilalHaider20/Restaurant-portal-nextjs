@@ -18,7 +18,7 @@ export default function PassengerDropdown() {
             <button onClick={() => setOpen(!open)} className="flex justify-center item-center gap-2 text-white py-2 px-4 rounded">
                 {seat}
                 <svg
-                    className={`w-4 h-4 mt-1 ml-1 w-fit transform transition-transform ${open ? 'rotate-180' : ''
+                    className={`w-4 h-4 mt-1 ml-1  transform transition-transform ${open ? 'rotate-180' : ''
                         }`}
                     fill="none"
                     stroke="currentColor"
@@ -38,7 +38,7 @@ export default function PassengerDropdown() {
                     <h3 className='font-medium text-base text-black'>Select Cabin Class</h3>
                     <div className='flex justify-between gap-1'>
                         {options.map((e, index) => (
-                            <div onClick={() => setSeat(e.seat)} className={`flex flex-col w-[130px]  cursor-pointer rounded-lg flex items-center py-3 px-3 mt-2  ${seat === e.seat? ` text-primary-blue bg-[#E1EAF780] border border-primary-blue` : `text-grey-text border border-divider-color`}`} key={index} >
+                            <div onClick={() => setSeat(e.seat)} className={` flex-col w-[130px]  cursor-pointer rounded-lg flex items-center py-3 px-3 mt-2  ${seat === e.seat? ` text-primary-blue bg-[#E1EAF780] border border-primary-blue` : `text-grey-text border border-divider-color`}`} key={index} >
                                 <span>
                                     <Image
                                         src={seat === e.seat ? e.iconActive : e.iconInactive}

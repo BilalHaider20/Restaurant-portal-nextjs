@@ -12,9 +12,9 @@ export default function Layout({ children }) {
     const {locale} = useParams()
 
     useEffect(() => {
-        console.log("language", locale);
+       
         if (lang.lang !== locale) {
-            console.log(lang.lang);
+            
             router.push(`/${lang.lang}`);
         }
 

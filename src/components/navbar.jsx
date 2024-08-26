@@ -21,9 +21,8 @@ const Navbar = ({ toggleSidebar }) => {
             <Image src={images.logo} />
           </Link>
         </div>
-        <div className="sm:flex justify-center gap-3 w-[33.3%] h-10 align-center hidden">
+        <div className="md:flex justify-center gap-3 w-[33.33%] h-10 align-center hidden ">
           <p className="text-base font-medium text-[#346CC4] my-auto ">Help</p>
-          <Dropdown options={options} />
           <Dropdown options={options} />
           <button
             type="button"
@@ -33,9 +32,9 @@ const Navbar = ({ toggleSidebar }) => {
           </button>
           <button
             type="button"
-            className="w-auto py-2 px-6 inline-flex items-center text-[16px] font-medium rounded-lg bg-[#346CC4] text-white disabled:pointer-events-none"
+            className="min-w-26 py-2 px-6 inline-flex items-center text-[14px] font-medium rounded-lg bg-[#346CC4] text-white disabled:pointer-events-none"
           >
-            <Link href="/en/auth/signup">Sign Up</Link>
+            <Link href="/en/auth/signup">Sign up</Link>
           </button>
         </div>
       </div>

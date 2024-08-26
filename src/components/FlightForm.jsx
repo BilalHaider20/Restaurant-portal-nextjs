@@ -66,7 +66,7 @@ const FlightForm = () => {
                 <div>
                     {
                         stopoverForm ? <button onClick={() => setStopoverForm(false)} type="button" className='border border-white rounded-full  w-[20px] h-[20px] inline-flex items-center justify-center text-sm'><RxCross2 /> </button>
-                            : <button className='flex items-center justify-center gap-2 bg-[#E1EAF7] text-sm text-primary-blue border w-[172px] py-[0.75rem] rounded-lg font-semibold'><CiSearch className='text-2xl' /> Search</button>
+                            : <button className='flex items-center justify-center gap-2 bg-[#E1EAF7] text-sm text-primary-blue border  p-[0.75rem] rounded-lg font-semibold'><CiSearch className='text-2xl' /> Search</button>
                     }
                 </div>
             </div>
