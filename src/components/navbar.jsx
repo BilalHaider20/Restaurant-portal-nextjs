@@ -23,7 +23,6 @@ const Navbar = ({ toggleSidebar }) => {
         </div>
         <div className="sm:flex justify-center gap-3 w-[33.3%] h-10 align-center hidden">
           <p className="text-base font-medium text-[#346CC4] my-auto ">Help</p>
-          ini Copy
           <Dropdown options={options} />
           <Dropdown options={options} />
           <button

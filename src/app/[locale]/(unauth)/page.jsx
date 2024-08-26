@@ -9,15 +9,11 @@ export default function Page() {
 
   return (
     <div
-      className={`flex flex-col gap-5 w-full bg-background-blue pb-5 ${
-        locale === "ar" ? "text-right direction-rtl" : ""
-      }`}
+      className={`flex flex-col gap-5 w-full bg-background-blue pb-5`}
     >
       <SearchFlights />
       <div
-        className={`bg-white flex justify-between items-center p-3 px-5 mx-5 rounded-lg ${
-          locale === "ar" ? "flex-row-reverse" : ""
-        }`}
+        className={`bg-white flex justify-between items-center p-3 px-5 mx-5 rounded-lg `}
       >
         <div className="flex items-center gap-3">
           <Image src={images.visa} alt="icon visa"></Image>
@@ -29,7 +25,7 @@ export default function Page() {
           </div>
         </div>
         <SlArrowRight
-          className={`text-grey-text ${locale === "ar" ? "rotate-180" : ""}`}
+          className={`text-grey-text `}
         />
       </div>
 
