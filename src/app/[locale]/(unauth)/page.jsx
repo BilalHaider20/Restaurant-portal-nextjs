@@ -2,11 +2,9 @@ import SearchFlights from "../../../components/SearchFlights";
 import images from "/public/assets/images/index";
 import { SlArrowRight } from "react-icons/sl";
 import Image from "next/image";
-import { useLocale } from "next-intl";
-
+import { useTranslations } from "next-intl";
 export default function Page() {
-  const locale = useLocale();
-
+const t= useTranslations('Flights.Visa-Info');
   return (
     <div
       className={`flex flex-col gap-5 w-full bg-background-blue pb-5`}
@@ -19,9 +17,9 @@ export default function Page() {
           <Image src={images.visa} alt="icon visa"></Image>
           <div>
             <h2 className="text-lg font-semibold text-heading-grey">
-              Need Visa Information?
+              {t('need-visa-info')}
             </h2>
-            <span className="text-grey-text">We've got you covered!</span>
+            <span className="text-grey-text">{t('description')}</span>
           </div>
         </div>
         <SlArrowRight
@@ -30,9 +28,7 @@ export default function Page() {
       </div>
 
       <div
-        className={`mx-5 rounded-lg bg-cover bg-center w-full  aspect-w-3 aspect-h-1 ${
-          locale === "ar" ? "bg-right" : ""
-        }`}
+        className={`mx-5 rounded-lg bg-cover bg-center w-full  aspect-w-3 aspect-h-1 `}
         style={{
           backgroundImage: images.abudhabi
             ? `url(${images.abudhabi})`
@@ -41,4 +37,9 @@ export default function Page() {
       ></div>
     </div>
   );
+}
+
+
+export function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'ar' }];
 }

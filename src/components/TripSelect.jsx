@@ -33,7 +33,8 @@ export default function ToggleButtons({ onChange }) {
       </div>
       <div
         className="absolute z-10 bottom-0 w-[93px] h-full bg-[#FFFFFF33] rounded-full flex items-center justify-center pointer-events-none transition-left duration-300 ease-in-out"
-        style={{ left: `calc(${active === t('One-Way') ? '0.2rem' : active === t('Round-Way') ? '100px' : '200px'} - 0.3rem)` }}
+        style={{ left: `calc(${active === t('One-Way') ? '0.2rem' 
+          : active === t('Round-Way') ? '100px' : '200px'} - 0.3rem)` }}
       >
       </div>
     </div>

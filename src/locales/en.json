@@ -18,7 +18,12 @@
       "One-Way":"One-Way",
       "Round-Way":"Round-Way",
       "Multi-City":"Multi-City"
+    },
+    "Visa-Info":{
+      "need-visa-info":"Need Visa Information ?",
+      "description":"We have got you covered"
     }
+
   }
 
   
