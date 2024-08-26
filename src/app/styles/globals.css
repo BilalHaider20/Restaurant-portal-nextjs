@@ -73,7 +73,7 @@ html, body *{
   @apply flex flex-col gap-2 text-grey-text list-none;
 }
 
-.rtl {
+/* .rtl {
   direction: rtl;
   text-align: right;
 }
@@ -90,4 +90,4 @@ html, body *{
 .rtl .ml-6 {
   margin-left: 0;
   margin-right: 1.5rem;
-}
+} */

@@ -10,6 +10,16 @@
     "signinbtn": "Sign In",
     "forgot": "Forgot Password?",
     "register": "Don't have an account? Register"
+  },
+  "Flights":{
+    "title":"Search for Flights",
+    "description":"Find the best deals for your air travel",
+    "TripSelect":{
+      "One-Way":"One-Way",
+      "Round-Way":"Round-Way",
+      "Multi-City":"Multi-City"
+    }
   }
+
   
 }
