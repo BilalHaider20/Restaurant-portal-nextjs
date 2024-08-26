@@ -1,12 +1,13 @@
 "use client"
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import "../../styles/globals.css"
+import '../../../styles/globals.css'
 import Image from 'next/image'
 import { useForm } from 'react-hook-form'
 import { LuKeyRound } from "react-icons/lu";
-import PhoneNumber from '../../../components/PhoneNumber'
+import PhoneInput from 'react-phone-input-2'
 import Link from 'next/link'
+import 'react-phone-input-2/lib/style.css'
 
 export default function Page() {
   const router = useRouter();
@@ -25,15 +26,15 @@ export default function Page() {
 
   return (
 
-    <div className='my-5  flex flex-col items-center justify-center w-6/12 h-full py-10 bg-background-blue'>
+    <div className='flex flex-col items-center justify-center w-full  h-full py-20 bg-background-blue md:w-6/12 '>
       <div className='container mx-auto w-9/12 text-center'>
-        <h1 className='text-3xl font-semibold'>Welcome to Bookme</h1>
-        <span className='text-lg font-extralight'>Please provide details below to login your account</span>
+        <h1 className='text-3xl font-semibold  text-heading-grey tracking-tighter 	'>Welcome to Bookme</h1>
+        <span className='text-lg font-extralight text-heading-grey tracking-tighter '>Please provide details below to login your account</span>
       </div>
-      <form onSubmit={handleSubmit(onSubmit)} className='container mx-auto w-9/12 space-y-4'>
+      <form onSubmit={handleSubmit(onSubmit)} className='formAuth'>
         <div className="space-y-2 w-full">
-          <label className='m-0' htmlFor="phone">Phone Number</label>
-          <PhoneNumber />
+          <label className='m-0' htmlFor="phone">Phone Number </label>
+          <PhoneInput country='pk' className="inputForm" />
         </div>
         <div className="relative space-y-2 w-full">
           <label className='m-0' htmlFor="Password">Password</label>
@@ -64,14 +65,14 @@ export default function Page() {
           <a className="text-primary-blue font-semibold" href="">Forgot password?</a>
         </div>
 
-        <button type="submit" className="bg-light-blue text-white py-2 px-4 rounded w-full">Sign In</button>
+        <button type="submit" className="bg-light-blue text-white py-3 px-4 rounded w-full">Sign In</button>
       </form>
-      <p className='text-grey'>or continue with</p>
-      <div className='flex flex-col w-9/12 mt-3 space-y-2'>
-        <a className='btnSigninWith' href=""><Image src="/assets/images/google.png" width={15} height={15}></Image> Sign in with Google</a>
-        <a className='btnSigninWith' href=""><Image src="/assets/images/facebook.png" width={15} height={15}></Image> Sign in with Facebook</a>
+      <p className='text-grey '>or continue with</p>
+      <div className='btnAuth'>
+        <a className='btnSigninWith' href=""><Image src="/assets/images/google.png" width={15} height={15} alt='google icon'></Image> Sign in with Google</a>
+        <a className='btnSigninWith' href=""><Image src="/assets/images/facebook.png" width={15} height={15} alt='fb icon'></Image> Sign in with Facebook</a>
       </div>
-      <p className='flex font-base items-center gap-2 mt-3'>Don’t Have an Account? <Link className="font-base text-light-blue text-semibold" href="/auth/signup">Sign Up</Link></p>
+      <p className='flex font-base items-center gap-2 mt-3'>Don’t Have an Account? <Link className="font-base text-light-blue text-semibold" href="/en/auth/signup">Sign Up</Link></p>
     </div>
 
 

@@ -7,6 +7,7 @@ const Dropdown = ({options}) => {
   const toggleDropdown = () => setIsOpen(!isOpen);
 
   const handleOptionClick = (option) => {
+    console.log(option);
     setSelectedOption(option);
     setIsOpen(false);
   };
