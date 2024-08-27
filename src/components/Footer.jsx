@@ -4,7 +4,7 @@ import Image from 'next/image'
 import images from "/public/assets/images/index"
 import Dropdown from './DropDown';
 import LangDropdown from './LangDropdown'
-
+import ThemeSwitcher from './ThemeSwitcher'
 const Footer = () => {
     const options = ["PKR", "EUR", "USD", "SAR"];
     return (
@@ -95,7 +95,7 @@ const Footer = () => {
             <div className='flex flex-col gap-5 justify-between items-center mt-10 py-3 px-5 border-divider-grey border-t md:justify-between md:flex-row '>
                 <div className='flex items-center gap-2'>
                     <LangDropdown />
-                    <Dropdown options={options} />
+                    <ThemeSwitcher/>
                 </div>
                 <span className='text-grey-text'>© 2024 BookmeSA incorporated</span>
                 <div className='flex items-center gap-3'>

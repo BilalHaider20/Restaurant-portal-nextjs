@@ -4,6 +4,8 @@ import { useParams } from 'next/navigation';
 import { useRouter, redirect } from 'next/navigation';
 import LayoutWrapper from '../../../components/LayoutWrapper';
 import { useAppSelector } from '../../../lib/hooks';
+import Providers from '../../../lib/providers';
+import "../../styles/globals.css";
 
 
 export default function Layout({ children }) {
@@ -21,6 +23,10 @@ export default function Layout({ children }) {
     }, [lang, locale, router]);
 
     return (
-        <LayoutWrapper>{children}</LayoutWrapper>
+        <LayoutWrapper>
+                <Providers>
+            {children}
+            </Providers>
+            </LayoutWrapper>
     );
 }
