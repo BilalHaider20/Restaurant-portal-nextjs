@@ -37,11 +37,16 @@
             "search" : "بحث",
             "addStopover" : "إضافة توقف"
         },
-       
+     
         "Visa-Info": {
             "need-visa-info": "هل تحتاج إلى معلومات التأشيرة؟",
             "description": "لدينا ما تحتاجه"
         }
 
+    },
+    "sidebar": {
+        "flights": "الرحلات",
+        "visitSaudi": "زيارة السعوديةi",
+        "wallet": "محفظة"
     }
 }

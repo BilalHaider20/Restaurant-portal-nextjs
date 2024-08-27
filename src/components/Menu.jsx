@@ -5,14 +5,17 @@ import FlightBlue from '/public/assets/images/flightBlue.svg';
 import FlightDark from '/public/assets/images/flightDark.svg';
 import MosqueBlue from '/public/assets/images/mosqueBlue.svg';
 import MosqueDark from '/public/assets/images/mosqueDark.svg';
+import { useTranslations } from 'next-intl';
 
 const Menu = () => {
+
+  const t = useTranslations('sidebar')
   const data = [
-    { text: 'Flights', iconActive: FlightBlue, iconInactive: FlightDark },
-    { text: 'Visit Saudi', iconActive: MosqueBlue, iconInactive: MosqueDark },
+    { text: t('flights'), iconActive: FlightBlue, iconInactive: FlightDark },
+    { text: t('visitSaudi'), iconActive: MosqueBlue, iconInactive: MosqueDark },
   ];
   
-  const [current, setCurrent] = useState('Flights');
+  const [current, setCurrent] = useState(t('flights'));
 
   return (
     <ul>

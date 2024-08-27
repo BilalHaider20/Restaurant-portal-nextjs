@@ -1,14 +1,24 @@
 import React, { useState } from 'react';
+import { useAppDispatch, useAppSelector } from '../lib/hooks';
+import {setCurrency} from '../lib/features/currency/currencySlice'
 
-const Dropdown = ({options}) => {
+const options = ["PKR", "USD", "SAR"];
+
+const Dropdown = () => {
+  const { cur }= useAppSelector((state) => state.cur);
+
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState(options[0]);
+  const [selectedOption, setSelectedOption] = useState(cur);
+
+  const dispatch = useAppDispatch()
+
 
   const toggleDropdown = () => setIsOpen(!isOpen);
 
   const handleOptionClick = (option) => {
-    console.log(option);
     setSelectedOption(option);
+    console.log('currency ', option);
+    dispatch(setCurrency(option));
     setIsOpen(false);
   };
   
