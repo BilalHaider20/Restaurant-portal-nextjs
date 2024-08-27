@@ -33,6 +33,11 @@
             "first" : "الدرجة الأولى",
             "selectClass" : "اختر فئة المقصورة"
         },
+        "form": {
+            "search" : "بحث",
+            "addStopover" : "إضافة توقف"
+        },
+       
         "Visa-Info": {
             "need-visa-info": "هل تحتاج إلى معلومات التأشيرة؟",
             "description": "لدينا ما تحتاجه"

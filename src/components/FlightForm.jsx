@@ -7,10 +7,11 @@ import { RxCross2 } from "react-icons/rx";
 import { AiOutlinePlus } from "react-icons/ai";
 import { CiSearch, CiCalendar } from "react-icons/ci";
 import { LuMoon } from "react-icons/lu";
+import { useTranslations } from 'next-intl';
 
 const FlightForm = () => {
     const [stopoverForm, setStopoverForm] = useState(false)
-
+    const t = useTranslations('Flights.form');
     const {
         register,
         handleSubmit,
@@ -60,13 +61,13 @@ const FlightForm = () => {
                 <div className=''>
                     <button type="button" onClick={() => setStopoverForm(true)} className='flex items-center gap-1'>
                         {!stopoverForm && <span className=' border border-white rounded-full  w-[20px] h-[20px] inline-flex items-center justify-center text-sm '><AiOutlinePlus /> </span>}
-                        <span>Add Stopover</span>
+                        <span>{t('addStopover')}</span>
                     </button>
                 </div>
                 <div>
                     {
                         stopoverForm ? <button onClick={() => setStopoverForm(false)} type="button" className='border border-white rounded-full  w-[20px] h-[20px] inline-flex items-center justify-center text-sm'><RxCross2 /> </button>
-                            : <button className='flex items-center justify-center gap-2 bg-[#E1EAF7] text-sm text-primary-blue border  p-[0.75rem] rounded-lg font-semibold'><CiSearch className='text-2xl' /> Search</button>
+                            : <button className='flex items-center justify-center gap-2 bg-[#E1EAF7] text-sm text-primary-blue border  p-[0.75rem] rounded-lg font-semibold'><CiSearch className='text-2xl' /> {t("search")}</button>
                     }
                 </div>
             </div>

@@ -1,13 +1,17 @@
 // components/ToggleButtons.js
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { useAppSelector } from '../lib/hooks';
+
 export default function ToggleButtons({ onChange }) {
   const [active, setActive] = useState('One-Way');
+  const { lang }= useAppSelector((state) => state.lang);
+  const dir = lang === 'ar' ? 'rtl' : 'ltr'
 
   const handleClick = (selection) => {
-    setActive(t(selection));
+    setActive(selection);
     if (onChange) {
-      onChange(t(selection));
+      onChange(selection);
     }
   };
   const t = useTranslations('Flights.TripSelect');
@@ -32,9 +36,11 @@ export default function ToggleButtons({ onChange }) {
         </button>
       </div>
       <div
-        className="absolute z-10 bottom-0 w-[93px] h-full bg-[#FFFFFF33] rounded-full flex items-center justify-center pointer-events-none transition-left duration-300 ease-in-out"
-        style={{ left: `calc(${active === t('One-Way') ? '0.2rem' 
-          : active === t('Round-Way') ? '100px' : '200px'} - 0.3rem)` }}
+        className= {`absolute z-10 bottom-0 ${dir === 'rtl' ? 'w-[85px]' : 'w-[93px]' }  h-full bg-[#FFFFFF33] rounded-full flex items-center justify-center pointer-events-none transition-left duration-300 ease-in-out`}
+        style={ dir === 'rtl' ?  { right: `calc(${active === 'One-Way' ? '0.2rem' 
+          : active === 'Round-Way' ? '83px' : '173px'} - 0.3rem)` } : 
+          { left: `calc(${active === 'One-Way' ? '0.2rem' 
+            : active === 'Round-Way' ? '100px' : '200px'} - 0.3rem)` } }
       >
       </div>
     </div>
