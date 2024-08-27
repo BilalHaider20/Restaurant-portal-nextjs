@@ -1,36 +1,43 @@
- "use client";
+"use client";
 import images from "../../../public/assets/Images";
 import { useState } from "react";
 import Image from "next/image";
 import PhoneNumber from "../../components/PhoneNumber";
+// import navBar from "./navbar";
+import Link from "next/link";
 
 const ForgotPassword = () => {
   const [isCodeSent, setIsCodeSent] = useState(false);
-  const handleGetCode = () => {
-    setIsCodeSent(true);
-  };
 
   return (
     <div className="flex flex-col h-screen">
+      {/* <navbar /> */}
       <nav className="flex items-center justify-between p-4 w-full text-white">
-        <Image
-          src={images.sa_logo}
-          alt="Company Logo"
-          className="h-[41px] w-[140px]"
-        />
+        <Link href="/en" className="cursor-pointer">
+          <Image
+            src={images.sa_logo}
+            alt="Company Logo"
+            className="h-[41px] w-[140px]"
+          />
+        </Link>
         <div className="space-x-4">
-          <button className="text-[#346CC4] font-semibold py-2 px-4 rounded">
-            Help
-          </button>
-          <button className="text-[#346CC4] font-semibold py-2 px-4 rounded border border-light-blue">
-            Login
-          </button>
-          <button className="bg-[#346CC4] text-white hover:bg-[#285A8A] font-semibold py-2 px-4 rounded">
-            Sign Up
-          </button>
+          <Link href="/en">
+            <button className="text-[#346CC4] font-semibold py-2 px-4 rounded">
+              Help
+            </button>
+          </Link>
+          <Link href="/en/auth/login">
+            <button className="text-[#346CC4] font-semibold py-2 px-4 rounded border border-light-blue">
+              Login
+            </button>
+          </Link>
+          <Link href="/en/auth/signup">
+            <button className="bg-[#346CC4] text-white hover:bg-[#285A8A] font-semibold py-2 px-4 rounded">
+              Sign Up
+            </button>
+          </Link>
         </div>
       </nav>
-
       <div className="flex flex-grow flex-col md:flex-row">
         {/* Left Section */}
         <div className="flex flex-col justify-center items-center p-8 w-full md:w-1/2 bg-[#F6F9FD]">
@@ -78,8 +85,8 @@ const ForgotPassword = () => {
           <h2 className="text-2xl font-bold mb-2">Forgot Password</h2>
 
           <p className="text-center text-[#808080] mb-4">
-            Please Provide Your Registered Phone Number. We&apos;ll Send You a Code{" "}
-            <br /> to Reset Your Password.
+            Please Provide Your Registered Phone Number. We&apos;ll Send You a
+            Code <br /> to Reset Your Password.
           </p>
 
           <div className="w-full max-w-lg">
@@ -96,9 +103,11 @@ const ForgotPassword = () => {
               Get Code
             </button>
 
-            <button className="bg-transparent text-[#346CC4] font-semibold w-full h-[48px] rounded">
-              Back to Login
-            </button>
+            <Link href="/en/auth/login">
+              <button className="bg-transparent text-[#346CC4] font-semibold w-full h-[48px] rounded">
+                Back to Login
+              </button>
+            </Link>
           </div>
         </div>
 

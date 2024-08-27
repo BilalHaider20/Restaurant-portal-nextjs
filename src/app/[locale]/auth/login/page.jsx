@@ -1,5 +1,4 @@
 "use client"
-import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import '../../../styles/globals.css'
 import Image from 'next/image'
@@ -65,7 +64,7 @@ export default function Page() {
             <label htmlFor="remember" className="ml-2 font-medium text-gray-700 text-base">Remember me</label>
           </div>
 
-          <a className="text-primary-blue font-semibold" href="">Forgot password?</a>
+          <Link className="text-primary-blue font-semibold" href="/forgot">Forgot password?</Link>
         </div>
 
         <button type="submit" className="bg-light-blue text-white py-3 px-4 rounded w-full">Sign In</button>
