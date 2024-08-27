@@ -3,9 +3,8 @@ import React from "react";
 import images from "../../public/assets/Images/index";
 import Dropdown from "./DropDown.jsx";
 import Image from "next/image";
-import { useRouter, Link } from "next/navigation";
-import { useState } from "react";
-
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const Navbar = ({toggleSidebar}) => {
@@ -35,17 +34,15 @@ const Navbar = ({toggleSidebar}) => {
           <Dropdown options={options}  />
           <button
             type="button"
-            onClick={() => router.push(`${pathname}/auth/login`)}
             className="py-3 px-7 inline-flex cursor-pointer items-center  text-base font-medium rounded-lg border border-[#346CC4] text-[#346CC4]  disabled:pointer-events-none"
           >
-            <Link href="/en/auth/login">Login</Link>
+            <Link href={`${pathname}/auth/login`}>Login</Link>
           </button>
           <button
             type="button"
-            onClick={() => router.push(`${pathname}/auth/signup`)}
             className="w-auto py-2 px-6 inline-flex items-center text-[16px] font-medium rounded-lg bg-[#346CC4] text-white disabled:pointer-events-none"
           >
-            <Link href="/en/auth/signup">Sign up</Link>
+            <Link href={`${pathname}/auth/signup`} >Sign up</Link>
           </button>
         </div>
       </div>
