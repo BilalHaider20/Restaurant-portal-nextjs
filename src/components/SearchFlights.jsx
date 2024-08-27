@@ -12,7 +12,6 @@ const SearchFlights = () => {
     const handleToggleChange = (selection) => {
         setActiveSelection(t(selection));
     };
-    const locale = useLocale()
     const t = useTranslations('Flights');
     return (
         <div className={`p-10 bg-primary-blue text-white w-full `}>

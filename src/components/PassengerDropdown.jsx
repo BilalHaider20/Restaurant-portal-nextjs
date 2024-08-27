@@ -1,8 +1,13 @@
 import { useState } from 'react';
 import { AiOutlineUser } from "react-icons/ai";
+import { useAppSelector } from '../lib/hooks';
+import { useTranslations } from 'next-intl';
 
 export default function PassengerDropdown() {
+    const { lang }= useAppSelector((state) => state.lang);
     const [open, setOpen] = useState(false)
+    const dir = lang === 'ar' ? 'rtl' : 'ltr'
+    const t = useTranslations('Flights.PassengerDropdown');
     const [passengers, setPassengers] = useState({
         adults: 1,
         children: 0,
@@ -27,9 +32,9 @@ export default function PassengerDropdown() {
         <div className="relative">
             <button onClick={() => setOpen(!open)} className="flex justify-center item-center gap-2 text-white py-2 ">
                 <AiOutlineUser className='text-2xl ' />
-                {passengers.adults} Adult
-                {passengers.children > 0 && `, ${passengers.children} Child`}
-                {passengers.infants > 0 && `, ${passengers.infants} Infant`}
+                {passengers.adults} {t('adult')}
+                {passengers.children > 0 && `, ${passengers.children} ${t('children')}`}
+                {passengers.infants > 0 && `, ${passengers.infants} ${t('infants')}`}
                 <svg
                     className={`w-4 h-4 mt-1 ml-1 w-fit transform transition-transform ${open ? 'rotate-180' : ''
                         }`}
@@ -46,9 +51,9 @@ export default function PassengerDropdown() {
                     ></path>
                 </svg>
             </button>
-            {open && (<div className="absolute text-black right-0 mt-2 z-10 w-[400px] bg-white shadow-lg rounded-lg py-4 px-6">
+            {open && (<div className={`absolute text-black ${ dir === 'rtl' ? "left-0" : "right-0" }  mt-2 z-10 w-[400px] bg-white shadow-lg rounded-lg py-4 px-6`}>
                 <div className="pgerDropdownDiv">
-                    <span>Adults <span className='text-grey-text'>( 12 years & above )</span></span>
+                    <span>{t('adult')} <span className='text-grey-text'>( {t("adultAge")} )</span></span>
                     <div className="flex items-center gap-2">
                         <button
                             onClick={() => handleDecrease('adults')}
@@ -66,7 +71,7 @@ export default function PassengerDropdown() {
                     </div>
                 </div>
                 <div className="pgerDropdownDiv">
-                    <span>Children <span className='text-grey-text'>( 2-12 Years )</span></span>
+                    <span>{t('children')} <span className='text-grey-text'>( {t("childrenAge")} )</span></span>
                     <div className="flex items-center gap-2">
                         <button
                             onClick={() => handleDecrease('children')}
@@ -84,7 +89,7 @@ export default function PassengerDropdown() {
                     </div>
                 </div>
                 <div className="pgerDropdownDiv">
-                    <span>Infants <span className='text-grey-text'>( Under 2 Years )</span></span>
+                    <span>{t('infants')} <span className='text-grey-text'>( {t("infantsAge")} )</span></span>
                     <div className="flex items-center gap-2">
                         <button
                             onClick={() => handleDecrease('infants')}

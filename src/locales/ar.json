@@ -19,6 +19,20 @@
           "Round-Way":"ذهاب وعودة",
           "Multi-City":"متعددة المدن"
         },
+        "PassengerDropdown": {
+            "adult": "بالغ",
+            "children": "أطفال",
+            "infants": "الرضع",
+            "adultAge": "12 سنة فما فوق",
+            "childrenAge": "2-12 سنة",
+            "infantsAge": "أقل من سنتين"
+        },
+        "ClassDropdown": {
+            "economy":"الدرجة السياحية",
+            "business":"درجة الأعمال",
+            "first" : "الدرجة الأولى",
+            "selectClass" : "اختر فئة المقصورة"
+        },
         "Visa-Info": {
             "need-visa-info": "هل تحتاج إلى معلومات التأشيرة؟",
             "description": "لدينا ما تحتاجه"
