@@ -3,6 +3,7 @@ import React from 'react';
 import images from '../../../public/assets/Images/index';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 const Reset = () => {
   const router = useRouter();
@@ -15,7 +16,9 @@ const Reset = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <nav className='flex flex-wrap items-center justify-between p-4 w-full text-white bg-white'>
+        <Link href="/en/auth/login">
         <Image src={images.logo} alt="Logo" className="h-10 w-auto mb-4 sm:mb-0" />
+        </Link>
         <div className='flex flex-wrap space-x-2 sm:space-x-4'>
           <button className='text-blue-700 font-semibold py-2 px-4 rounded text-sm sm:text-base'>
             Help

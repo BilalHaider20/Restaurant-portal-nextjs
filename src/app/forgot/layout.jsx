@@ -1,15 +1,17 @@
-import "../styles/globals.css"
+import "../styles/globals.css";
+// import navbar from "./navbar"
+
 export const metadata = {
-  title: "Restaurant Management Portal",
+  title: "Forgot Password",
   description: "Bookme Restaurant Portal",
 };
 
-export default function RootLayout({
-  children
-}) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+      </body>
     </html>
-  )
+  );
 }
