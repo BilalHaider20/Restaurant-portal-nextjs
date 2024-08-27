@@ -22,7 +22,7 @@ const Sidebar = () => {
     convert();
   }, [cur])
   return (
-    <div className='block border-r-0 h-[90vh] w-[289px] py-[12px] px-[20px] flex-col align-top flex-shrink-0 gap-6 '>
+    <div className='dark:bg-slate-900 dark:text-white block border-r-0 h-[90vh] w-[289px] py-[12px] px-[20px] flex-col align-top flex-shrink-0 gap-6 '>
       <Menu  /> 
       <div className='w-full h-[1px] bg-divider-grey my-2'></div>
 

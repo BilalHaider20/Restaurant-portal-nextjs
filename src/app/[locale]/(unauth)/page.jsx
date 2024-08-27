@@ -11,11 +11,11 @@ export default function Page(params) {
   const dir = params.locale === "ar" ? "rtl" : "ltr";
   return (
     <div
-      className={`flex flex-col gap-5 w-full bg-background-blue pb-5`}
+      className={`bg-white dark:bg-gray-800 dark:text-white flex flex-col gap-5 w-full pb-5`}
     >
       <SearchFlights />
       <div
-        className={`bg-white flex justify-between items-center p-3 px-5 mx-5 rounded-lg `}
+        className={` flex justify-between items-center p-3 px-5 mx-5 rounded-lg`}
       >
         <div className="flex items-center gap-3">
           <Image src={images.visa} alt="icon visa"></Image>

@@ -17,7 +17,7 @@ const Navbar = ({toggleSidebar}) => {
 
   return (
     <>
-      <div className=" bg-white px-[15px] py-[20px] w-full flex sm:items-center sm:gap-4">
+      <div className=" px-[15px] py-[20px] w-full flex sm:items-center sm:gap-4">
         <div className="w-full sm:w-2/3 h-10 flex justify-start gap-4 sm:gap-8">
           <Image
             className="cursor-pointer"
