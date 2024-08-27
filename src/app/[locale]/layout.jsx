@@ -5,7 +5,6 @@ import StoreProvider from '../StoreProvider';
 import { NextIntlClientProvider } from 'next-intl';
 import PrelineScript from '../components/PrelineScript'
 import { getMessages } from 'next-intl/server';
-import {getLangDir} from 'rtl-detect';
 
 
 const inter = Inter({ subsets: ["latin"] });

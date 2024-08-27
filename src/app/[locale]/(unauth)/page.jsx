@@ -1,10 +1,14 @@
 import SearchFlights from "../../../components/SearchFlights";
 import images from "/public/assets/images/index";
-import { SlArrowRight } from "react-icons/sl";
+import { SlArrowRight, SlArrowLeft } from "react-icons/sl";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-export default function Page() {
-const t= useTranslations('Flights.Visa-Info');
+import useLocale from "next-intl";
+import { useAppSelector } from "../../../lib/hooks";
+export default function Page(params) {
+
+  const t = useTranslations('Flights.Visa-Info');
+  const dir = params.locale === "ar" ? "rtl" : "ltr";
   return (
     <div
       className={`flex flex-col gap-5 w-full bg-background-blue pb-5`}
@@ -23,8 +27,9 @@ const t= useTranslations('Flights.Visa-Info');
           </div>
         </div>
         <SlArrowRight
-          className={`text-grey-text `}
-        />
+            className={`text-grey-text `}
+          />
+
       </div>
 
       <div

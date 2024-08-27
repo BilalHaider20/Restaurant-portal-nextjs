@@ -9,7 +9,7 @@ import { usePathname } from "next/navigation";
 
 const Navbar = ({toggleSidebar}) => {
 
-  const options = ["PKR", "EUR", "USD", "SAR"];
+  
 
   const router = useRouter()
 
@@ -31,7 +31,7 @@ const Navbar = ({toggleSidebar}) => {
         </div>
         <div className="md:flex justify-center gap-3 w-[33.33%] h-10 align-center hidden ">
           <p className="text-base font-medium text-[#346CC4] my-auto ">Help</p>
-          <Dropdown options={options}  />
+          <Dropdown  />
           <button
             type="button"
             className="py-3 px-7 inline-flex cursor-pointer items-center  text-base font-medium rounded-lg border border-[#346CC4] text-[#346CC4]  disabled:pointer-events-none"

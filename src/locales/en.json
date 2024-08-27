@@ -41,7 +41,11 @@
       "need-visa-info":"Need Visa Information ?",
       "description":"We have got you covered"
     }
-
+  },
+  "sidebar": {
+    "flights": "Flights",
+    "visitSaudi": "Visit Saudi",
+    "wallet": "Wallet"
   }
 
   
