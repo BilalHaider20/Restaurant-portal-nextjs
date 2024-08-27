@@ -78,7 +78,7 @@ const ForgotPassword = () => {
           <h2 className="text-2xl font-bold mb-2">Forgot Password</h2>
 
           <p className="text-center text-[#808080] mb-4">
-            Please Provide Your Registered Phone Number. We will Send You a Code{" "}
+            Please Provide Your Registered Phone Number. We&apos;ll Send You a Code{" "}
             <br /> to Reset Your Password.
           </p>
 

@@ -4,16 +4,16 @@ import { useAppDispatch, useAppSelector } from '../lib/hooks';
 import { setLanguage } from '../lib/features/lang/langSlice';
 
 
+const options = [
+    { lang: "English", code: "en", iconCode: "GB" },
+    { lang: "Arabic", code: "ar", iconCode: "SA" },
+];
+
 
 const LangDropdown = () => {
 
-    const options = [
-        { lang: "English", code: "en", iconCode: "GB" },
-        { lang: "Arabic", code: "ar", iconCode: "SA" },
-    ];
-
     const dispatch = useAppDispatch()
-    const lang = useAppSelector((state) => state.lang);
+    const {lang} = useAppSelector((state) => state.lang);
 
     const currentLang = useAppSelector((state) => state.lang);
     const [isOpen, setIsOpen] = useState(false);
@@ -22,11 +22,11 @@ const LangDropdown = () => {
     );
 
     useEffect(() => {
-        const selected = options.find(option => option.code === lang.lang);
+        const selected = options.find(option => option.code === lang);
         if (selected) {
             setSelectedOption(selected);
         }
-    }, []);
+    }, [lang]);
 
     const toggleDropdown = () => setIsOpen(!isOpen);
 

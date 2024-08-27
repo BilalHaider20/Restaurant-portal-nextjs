@@ -4,7 +4,7 @@
     "button": "Login"
   },
   "SignIn":{
-    "title": "Sign in to your account",
+    "title": "Welcome to Bookme",
     "email": "Email",
     "password": "Password",
     "signinbtn": "Sign In",

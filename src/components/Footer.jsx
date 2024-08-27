@@ -10,7 +10,7 @@ const Footer = () => {
     return (
         
         <div className='w-full py-5 px-4 '>
-            <div className="flex justify-between mt-auto">
+            <div className="flex flex-col gap-10 items-center justify-between mt-auto text-center md:text-left md:items-start md:flex-row md:gap-1">
                 <ul className="footerDiv">
                     <li className="font-medium text-lg">About</li>
                     <ul className="footerLinkDiv">
@@ -83,16 +83,16 @@ const Footer = () => {
                         <li>
                             <Link href="">BookmeSA for iOS</Link>
                         </li>
-                        <li>
+                        <li className='mx-auto md:mx-[1px]'>
                             <Link href=""><Image src={images.app_store} alt='app store icon'></Image></Link>
                         </li>
-                        <li>
+                        <li className='mx-auto md:mx-[1px]'>
                             <Link href=""><Image src={images.google_play} alt='google play icon'></Image></Link>
                         </li>
                     </ul>
                 </ul>
             </div>
-            <div className='flex justify-between items-center mt-10 py-3 px-5 border-divider-grey border-t '>
+            <div className='flex flex-col gap-5 justify-between items-center mt-10 py-3 px-5 border-divider-grey border-t md:justify-between md:flex-row '>
                 <div className='flex items-center gap-2'>
                     <LangDropdown />
                     <Dropdown options={options} />

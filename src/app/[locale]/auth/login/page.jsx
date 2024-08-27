@@ -8,9 +8,11 @@ import { LuKeyRound } from "react-icons/lu";
 import PhoneInput from 'react-phone-input-2'
 import Link from 'next/link'
 import 'react-phone-input-2/lib/style.css'
+import {useTranslations} from 'next-intl';
 
 export default function Page() {
   const router = useRouter();
+  const t = useTranslations('SignIn');
 
   const {
     register,
@@ -28,7 +30,8 @@ export default function Page() {
 
     <div className='flex flex-col items-center justify-center w-full  h-full py-20 bg-background-blue md:w-6/12 '>
       <div className='container mx-auto w-9/12 text-center'>
-        <h1 className='text-3xl font-semibold  text-heading-grey tracking-tighter 	'>Welcome to Bookme</h1>
+        {/* <h1 className='text-3xl font-semibold  text-heading-grey tracking-tighter 	'>Welcome to Bookme</h1> */}
+        <h1 className='text-3xl font-semibold  text-heading-grey tracking-tighter 	'>{t('title')}</h1>
         <span className='text-lg font-extralight text-heading-grey tracking-tighter '>Please provide details below to login your account</span>
       </div>
       <form onSubmit={handleSubmit(onSubmit)} className='formAuth'>

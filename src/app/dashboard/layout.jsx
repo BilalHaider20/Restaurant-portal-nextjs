@@ -15,8 +15,7 @@ export default function Layout({ children }) {
     <html lang="en">
       <body>
       <Navbar/>
-      {/* <Sidebar /> */}
-      <main className={inter.className} style={{flex:1}}>{children}</main>
+      <main style={{flex:1}}>{children}</main>
       </body>
     </html>
   );

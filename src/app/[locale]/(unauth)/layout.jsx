@@ -7,18 +7,18 @@ import { useAppSelector } from '../../../lib/hooks';
 
 
 export default function Layout({ children }) {
-    const lang = useAppSelector((state) => state.lang);
+    const { lang }= useAppSelector((state) => state.lang);
     const router = useRouter();
     const {locale} = useParams()
 
     useEffect(() => {
-       
-        if (lang.lang !== locale) {
-            
-            router.push(`/${lang.lang}`);
+        console.log("language", locale);
+        if (lang !== locale) {
+            console.log(lang);
+            router.push(`/${lang}`);
         }
 
-    }, [lang.lang, locale, router]);
+    }, [lang, locale, router]);
 
     return (
         <LayoutWrapper>{children}</LayoutWrapper>
